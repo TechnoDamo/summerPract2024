@@ -1,0 +1,37 @@
+<html lang="ru"><head>
+    <meta charset="utf-8">
+    <title>Летняя практика</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+</head>
+<body>
+<form method="POST" action="request.php">
+    <p><b>Запросы к базе данных:</b> </p>
+    <p>1. Выбор из таблицы ПОДРАЗДЕЛЕНИЯ информацию о подразделениях, имеющих тип "отдел", для которых процент надбавки 1 равен 50%.</p>
+    <p>2. Выбор из таблицы ШТАТНЫЕ ЕДИНИЦЫ информации о штатных единицах с окладом от 30000 до 50000</p>
+    <p>3. Выбор из таблицы ШТАТНЫЕ ЕДИНИЦЫ информации о штатных единицах с некоторым названием и окладом больше 50000. Ввод!</p>
+    <p>4. Выбор из таблицы ПОДРАЗДЕЛЕНИЯ информации о подразделениях, имеющих тип "цех", для которых процент надбавки 1 имеет значение
+    из некоторого заданного диапазона. Ввод!.</p>
+    <p>5. Заработная плата всех штатных единиц.</p>
+    <p>6. Вычисление среднего оклада для каждой группы штатных единиц. </p>
+    <label>Выберите запрос:<br><br>
+        <select name="options" id="options" onchange="showIndexInput()">
+            <option value="1"> 1</option>
+            <option value="2"> 2</option>
+            <option value="3"> 3</option>
+            <option value="4"> 4</option>
+            <option value="5"> 5</option>
+            <option value="6"> 6</option>
+        </select>
+    </label>
+    <div id="nameInput" style="display: none;">
+        <input type = "text" id="pos_name" name="pos_name" placeholder="Введите название должности">
+    </div>
+    <div id="bonus1RangeInput" style="display: none;">
+        <input type="number" id="lower" name="lowerBonus1" placeholder="Введите минимальный размер надбавки 1">
+        <input type="number" id="upper" name="upperBonus1" placeholder="Введите максимальный размер надбавки 1">
+    </div>
+    <button type="submit">Выбрать</button>
+</form>
+
+</body></html>
